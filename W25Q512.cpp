@@ -29,7 +29,6 @@ int W25Q512::begin()
     pinMode(_csPin, OUTPUT);
     digitalWrite(_csPin, HIGH);
     _spi->begin();
-    _spi->setDataMode(SPI_MODE0);
     delay(1);
 
     _spi->beginTransaction(SPISettings(SPI_W25Q512_CLOCK, MSBFIRST, SPI_MODE0)); 
